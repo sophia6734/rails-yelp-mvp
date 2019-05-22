@@ -1,0 +1,25 @@
+
+<h1>Restaurant Hunting 🍔🌭🥐</h1>
+
+<div class="row">
+  <% @restaurants.each do |restaurant| %>
+    <div class="col-sm-12 col-md-4">
+      <%= link_to restaurant_path(restaurant) do %>
+        <div class="card">
+          <img class="card-image" src="https://picsum.photos/150/100" alt="">
+          <div class="card-content">
+            <div class="card-name">
+              <%= restaurant.name %>
+              <span class="card-age">
+                <%= restaurant.category %> cusine
+              </span>
+            </div>
+            <div class="card-info">
+              <%= restaurant.address %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
